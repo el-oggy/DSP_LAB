@@ -1,0 +1,18 @@
+# MATLAB autosave and temporary files
+*.asv
+*.m~
+*.slxc
+*.autosave
+slprj/
+*.mex*
+*.tmp
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment and Secrets
+.env
+.env.*
+*.env
