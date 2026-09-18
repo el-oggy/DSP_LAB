@@ -1,7 +1,8 @@
 <div align="center">
 
 # 🌐 Digital Signal Processing (DSP) Lab
-**MATLAB Implementations & Visualizations**
+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=600&size=24&pause=1000&color=00F0FF&center=true&vCenter=true&width=600&lines=MATLAB+Implementations+%26+Visualizations;From+Signal+Generation+to+Advanced+Filtering;Publication-Ready+Code+Suite" alt="Typing SVG" /></a>
 
 <img src="./assets/hero_banner.jpg" alt="Digital Signal Processing Hero Banner" width="100%" />
 
