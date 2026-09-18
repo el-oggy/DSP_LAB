@@ -1,55 +1,38 @@
-# Experiment 02 — Elementary Discrete-Time Signals
+<div align="center">
 
-This module demonstrates the generation and visualization of fundamental discrete-time sequences: the **Unit Step sequence** $u[n]$, the **Unit Impulse sequence** $\delta[n]$, and the **Unit Ramp sequence** $r[n]$.
+<img src="./ui/header.svg" alt="Elementary Signals" width="100%" />
 
----
+# Elementary Signals
+*Discrete Sequences: Impulse, Step, Ramp*
 
-## 📄 Files in this Folder
-
-| File Name | Method | Index Range | Output Plot |
-| :--- | :--- | :--- | :--- |
-| [`dtft_frequency_response.m`](./dtft_frequency_response.m) | Iterative generation via conditional `for` loops | $n \in [-10, 10]$ | [`dtft_frequency_response_signals.png`](./outputs/dtft_frequency_response_signals.png) |
-| [`dtft_plotting.m`](./dtft_plotting.m) | Direct vector concatenation (`zeros` / `ones`) | $n \in [-5, 5]$ | [`dtft_plotting_signals.png`](./outputs/dtft_plotting_signals.png) |
-
-> [!NOTE]
-> *Historical Filename Clarification*: The filenames `dtft_frequency_response.m` and `dtft_plotting.m` represent the elementary discrete-time sequence generator implementations for basic signal analysis.
+</div>
 
 ---
 
-## 🔬 Script Details & Theory
+## 📌 Experiment Overview
 
-### Signal Definitions:
-1. **Unit Step Sequence**:
-   $$u[n] = \begin{cases} 1, & n \ge 0 \\ 0, & n < 0 \end{cases}$$
-2. **Unit Impulse (Dirac Delta) Sequence**:
-   $$\delta[n] = \begin{cases} 1, & n = 0 \\ 0, & n \ne 0 \end{cases}$$
-3. **Unit Ramp Sequence**:
-   $$r[n] = n \cdot u[n] = \begin{cases} n, & n \ge 0 \\ 0, & n < 0 \end{cases}$$
+This folder contains the MATLAB implementation for **Elementary Signals**. The code is designed to be self-contained, validated, and optimized for clarity.
 
----
+> [!NOTE]  
+> Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.
 
-## 📊 Respective Outputs
+## 🚀 Execution Guide
 
-### 1. Output from `dtft_frequency_response.m`:
-*Figure location: [`outputs/dtft_frequency_response_signals.png`](./outputs/dtft_frequency_response_signals.png)*
+You can run the script interactively in MATLAB or in headless batch mode.
 
-Generated over 21 sample points from $n = -10$ to $n = +10$ using condition-tested loops:
-
-![Elementary Signals (For-Loop)](./outputs/dtft_frequency_response_signals.png)
-
-### 2. Output from `dtft_plotting.m`:
-*Figure location: [`outputs/dtft_plotting_signals.png`](./outputs/dtft_plotting_signals.png)*
-
-Generated over 11 sample points from $n = -5$ to $n = +5$ using direct MATLAB array concatenation:
-
-![Elementary Signals (Vector)](./outputs/dtft_plotting_signals.png)
-
----
-
-## 💻 How to Run
+### Option 1: Interactive Mode
 ```matlab
-% Inside exp-02 folder
-dtft_frequency_response
-dtft_plotting
+cd exp-02
+% Run the specific .m file inside this directory
 ```
-Outputs are automatically saved into the [`outputs/`](./outputs/) directory.
+
+### Option 2: Automated Batch Mode (Recommended)
+Return to the root directory and run the master script to execute all experiments and generate all outputs automatically:
+```matlab
+run_all_experiments
+```
+
+---
+<div align="center">
+  <small><a href="../README.md">⬅ Back to Main Lab Index</a></small>
+</div>

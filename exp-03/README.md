@@ -1,43 +1,38 @@
-# Experiment 03 — Discrete-Time Fourier Transform (DTFT)
+<div align="center">
 
-This module implements numerical computation and continuous frequency spectrum visualization of the **Discrete-Time Fourier Transform (DTFT)** for causal decaying exponential signals.
+<img src="./ui/header.svg" alt="DTFT Analysis" width="100%" />
 
----
+# DTFT Analysis
+*Discrete-Time Fourier Transform*
 
-## 📄 Files in this Folder
-
-| File Name | Description | Output Plot |
-| :--- | :--- | :--- |
-| [`dtft_analysis_response.m`](./dtft_analysis_response.m) | Computes the continuous-frequency DTFT magnitude and phase spectrum of $x[n] = a^n u[n]$ | [`dtft_magnitude_phase_response.png`](./outputs/dtft_magnitude_phase_response.png) |
+</div>
 
 ---
 
-## 🔬 Mathematical Background
+## 📌 Experiment Overview
 
-The Discrete-Time Fourier Transform (DTFT) maps a discrete-time sequence $x[n]$ into a continuous, $2\pi$-periodic function of normalized angular frequency $\omega$:
+This folder contains the MATLAB implementation for **DTFT Analysis**. The code is designed to be self-contained, validated, and optimized for clarity.
 
-$$X(e^{j\omega}) = \sum_{n=-\infty}^{\infty} x[n] e^{-j\omega n}$$
+> [!NOTE]  
+> Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.
 
-For a causal exponential sequence $x[n] = a^n u[n]$ ($|a| < 1$, with $a = 0.5$ and $N = 16$):
-- **Magnitude Spectrum**: $|X(e^{j\omega})| = \frac{1}{\sqrt{1 - 2a\cos(\omega) + a^2}}$
-- **Phase Spectrum**: $\angle X(e^{j\omega}) = -\arctan\left(\frac{a\sin(\omega)}{1 - a\cos(\omega)}\right)$
+## 🚀 Execution Guide
 
----
+You can run the script interactively in MATLAB or in headless batch mode.
 
-## 📊 Respective Outputs
-
-### Output: `outputs/dtft_magnitude_phase_response.png`
-- **Subplot 1**: Truncated input time-domain sequence $x[n] = (0.5)^n$ for $n = 0, 1, \dots, 15$.
-- **Subplot 2**: Symmetrical low-pass magnitude spectrum $|X(e^{j\omega})|$ plotted over $\omega \in [-\pi, \pi]$ with peak at $\omega = 0$ ($|X(e^{j0})| \approx 2$).
-- **Subplot 3**: Anti-symmetric continuous phase response $\angle X(e^{j\omega})$ in radians showing smooth phase transition.
-
-![DTFT Analysis & Frequency Response](./outputs/dtft_magnitude_phase_response.png)
-
----
-
-## 💻 How to Run
+### Option 1: Interactive Mode
 ```matlab
-% Inside exp-03 folder
-dtft_analysis_response
+cd exp-03
+% Run the specific .m file inside this directory
 ```
-Outputs are automatically saved into the [`outputs/`](./outputs/) directory.
+
+### Option 2: Automated Batch Mode (Recommended)
+Return to the root directory and run the master script to execute all experiments and generate all outputs automatically:
+```matlab
+run_all_experiments
+```
+
+---
+<div align="center">
+  <small><a href="../README.md">⬅ Back to Main Lab Index</a></small>
+</div>

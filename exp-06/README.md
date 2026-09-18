@@ -1,66 +1,38 @@
-# Experiment 06 — Discrete Fourier Transform (DFT & IDFT)
+<div align="center">
 
-This module implements the direct computation of the **Discrete Fourier Transform (DFT)** and **Inverse Discrete Fourier Transform (IDFT)**, verifying the fundamental frequency-domain property: multiplication in the frequency domain equals circular convolution in the time domain.
+<img src="./ui/header.svg" alt="Discrete Fourier Transform" width="100%" />
 
----
+# Discrete Fourier Transform
+*Time to Frequency Domain Mapping*
 
-## 📄 Files in this Folder
-
-| File Name | Description | Output Plot |
-| :--- | :--- | :--- |
-| [`dft_analysis.m`](./dft_analysis.m) | Computes DFT of sequences $x_1[n]$ and $x_2[n]$ and evaluates spectral product $|Z_1(k)| = |X_1(k) \cdot X_2(k)|$ | [`dft_analysis.png`](./outputs/dft_analysis.png) |
-| [`dft_implementation.m`](./dft_implementation.m) | Full DFT and IDFT implementation: computes circular convolution $x_1[n] \circledast x_2[n]$ via spectral multiplication | [`dft_implementation.png`](./outputs/dft_implementation.png) |
+</div>
 
 ---
 
-## 🔬 Mathematical Formulation
+## 📌 Experiment Overview
 
-### 1. Discrete Fourier Transform (DFT):
-$$X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi}{N} k n}, \quad k = 0, 1, \dots, N-1$$
+This folder contains the MATLAB implementation for **Discrete Fourier Transform**. The code is designed to be self-contained, validated, and optimized for clarity.
 
-### 2. Inverse Discrete Fourier Transform (IDFT):
-$$x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{j \frac{2\pi}{N} k n}, \quad n = 0, 1, \dots, N-1$$
+> [!NOTE]  
+> Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.
 
-### 3. Circular Convolution Property:
-$$x_1[n] \circledast x_2[n] \iff X_1[k] \cdot X_2[k]$$
+## 🚀 Execution Guide
 
----
+You can run the script interactively in MATLAB or in headless batch mode.
 
-## 📊 Respective Outputs
-
-### 1. Output from `dft_analysis.m`:
-*Figure location: [`outputs/dft_analysis.png`](./outputs/dft_analysis.png)*
-
-```
-Sequence x1:    1     1     2     2
-Sequence x2:    1     2     3     4
-DFT X1(k):      6.00 + 0.00i  -1.00 + 1.00i   0.00 - 0.00i  -1.00 - 1.00i
-DFT X2(k):     10.00 + 0.00i  -2.00 + 2.00i  -2.00 - 0.00i  -2.00 - 2.00i
-Product Z1(k): 60.00 + 0.00i   0.00 - 4.00i  -0.00 + 0.00i  -0.00 + 4.00i
-```
-
-![DFT Analysis](./outputs/dft_analysis.png)
-
-### 2. Output from `dft_implementation.m`:
-*Figure location: [`outputs/dft_implementation.png`](./outputs/dft_implementation.png)*
-
-```
-Sequence x1(n): 1     2     2     1
-Sequence x2(n): 1     2     3     4
-DFT X1(k):      6.00 + 0.00i  -1.00 - 1.00i   0.00 - 0.00i  -1.00 + 1.00i
-DFT X2(k):     10.00 + 0.00i  -2.00 + 2.00i  -2.00 - 0.00i  -2.00 - 2.00i
-Product Z(k):  60.00 + 0.00i   4.00 + 0.00i  -0.00 + 0.00i   4.00 + 0.00i
-IDFT Output (Circular Convolution): 17    15    13    15
-```
-
-![DFT Implementation](./outputs/dft_implementation.png)
-
----
-
-## 💻 How to Run
+### Option 1: Interactive Mode
 ```matlab
-% Inside exp-06 folder
-dft_analysis
-dft_implementation
+cd exp-06
+% Run the specific .m file inside this directory
 ```
-Outputs are automatically saved into the [`outputs/`](./outputs/) directory.
+
+### Option 2: Automated Batch Mode (Recommended)
+Return to the root directory and run the master script to execute all experiments and generate all outputs automatically:
+```matlab
+run_all_experiments
+```
+
+---
+<div align="center">
+  <small><a href="../README.md">⬅ Back to Main Lab Index</a></small>
+</div>

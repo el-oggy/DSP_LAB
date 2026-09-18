@@ -1,64 +1,38 @@
-# Experiment 07 — DFT Magnitude & Phase Visualization
+<div align="center">
 
-This module computes and plots the **Magnitude Spectrum** $|X(k)|$ and **Phase Spectrum** $\angle X(k)$ of a discrete-time sequence using the Discrete Fourier Transform.
+<img src="./ui/header.svg" alt="DFT Spectrum Visualization" width="100%" />
 
----
+# DFT Spectrum Visualization
+*Magnitude and Phase Spectra*
 
-## 📄 Files in this Folder
-
-| File Name | Description | Output Plot |
-| :--- | :--- | :--- |
-| [`dft_visualization.m`](./dft_visualization.m) | Computes $N$-point DFT and decomposes the complex frequency spectrum into magnitude and unwrapped phase responses | [`dft_visualization.png`](./outputs/dft_visualization.png) |
+</div>
 
 ---
 
-## 🔬 Mathematical Formulation
+## 📌 Experiment Overview
 
-For an $N$-point real-valued discrete sequence $x[n]$:
-$$X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi}{N} k n} = \mathrm{Re}\{X[k]\} + j\,\mathrm{Im}\{X[k]\}$$
+This folder contains the MATLAB implementation for **DFT Spectrum Visualization**. The code is designed to be self-contained, validated, and optimized for clarity.
 
-1. **Magnitude Spectrum**:
-   $$|X[k]| = \sqrt{\mathrm{Re}\{X[k]\}^2 + \mathrm{Im}\{X[k]\}^2}$$
-   - Exhibits **even symmetry** around the Nyquist bin ($N/2$): $|X[k]| = |X[N-k]|$.
-2. **Phase Spectrum**:
-   $$\angle X[k] = \arctan\left(\frac{\mathrm{Im}\{X[k]\}}{\mathrm{Re}\{X[k]\}}\right)$$
-   - Exhibits **odd symmetry**: $\angle X[k] = -\angle X[N-k]$.
-3. **DC Component ($k = 0$)**:
-   $$X[0] = \sum_{n=0}^{N-1} x[n]$$
+> [!NOTE]  
+> Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.
 
----
+## 🚀 Execution Guide
 
-## 📊 Respective Outputs
+You can run the script interactively in MATLAB or in headless batch mode.
 
-### Output from `dft_visualization.m`:
-*Figure location: [`outputs/dft_visualization.png`](./outputs/dft_visualization.png)*
-
-```
-Input Sequence x1(n):
-     1     2     3     4     4     3     2     1
-
-DFT of X1(n):
-  20.00 + 0.00i  -5.83 - 2.41i   0.00 - 0.00i  -0.17 - 0.41i   
-   0.00 - 0.00i  -0.17 + 0.41i  -0.00 - 0.00i  -5.83 + 2.41i
-
-Magnitude |X1(k)|:
-   20.0000    6.3086    0.0000    0.4483    0.0000    0.4483    0.0000    6.3086
-
-Phase in degrees (unwrapped):
-         0  -157.50   -86.02  -112.50   -90.00  -247.50  -178.10  -202.50
-```
-
-![DFT Visualization Spectrum](./outputs/dft_visualization.png)
-
-- **Subplot 1**: Symmetrical triangular input pulse sequence $x_1[n]$.
-- **Subplot 2**: Discrete magnitude spectrum $|X_1(k)|$ highlighting the DC component at $k=0$ (amplitude 20) and even symmetry.
-- **Subplot 3**: Phase spectrum in degrees showing phase transitions.
-
----
-
-## 💻 How to Run
+### Option 1: Interactive Mode
 ```matlab
-% Inside exp-07 folder
-dft_visualization
+cd exp-07
+% Run the specific .m file inside this directory
 ```
-Outputs are automatically saved into the [`outputs/`](./outputs/) directory.
+
+### Option 2: Automated Batch Mode (Recommended)
+Return to the root directory and run the master script to execute all experiments and generate all outputs automatically:
+```matlab
+run_all_experiments
+```
+
+---
+<div align="center">
+  <small><a href="../README.md">⬅ Back to Main Lab Index</a></small>
+</div>

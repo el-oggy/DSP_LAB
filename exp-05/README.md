@@ -1,65 +1,38 @@
-# Experiment 05 — Correlation (Auto & Cross)
+<div align="center">
 
-This module implements correlation analysis of discrete-time sequences: **Auto-Correlation** $r_{xx}[m]$ and **Cross-Correlation** $r_{xy}[m]$ computed using convolution with time-reversed sequences.
+<img src="./ui/header.svg" alt="Correlation Analysis" width="100%" />
 
----
+# Correlation Analysis
+*Auto-Correlation & Cross-Correlation*
 
-## 📄 Files in this Folder
-
-| File Name | Description | Output Plot |
-| :--- | :--- | :--- |
-| [`auto_correlation.m`](./auto_correlation.m) | Computes the auto-correlation sequence $r_{xx}[m] = x[m] * x[-m]$ over symmetrical lags | [`auto_correlation.png`](./outputs/auto_correlation.png) |
-| [`cross_correlation.m`](./cross_correlation.m) | Computes the cross-correlation sequence $r_{xy}[m] = x[m] * y[-m]$ between two distinct signals | [`cross_correlation.png`](./outputs/cross_correlation.png) |
+</div>
 
 ---
 
-## 🔬 Mathematical Formulation
+## 📌 Experiment Overview
 
-### 1. Auto-Correlation:
-Quantifies the similarity of a signal with a delayed copy of itself:
-$$r_{xx}[m] = \sum_{k=-\infty}^{\infty} x[k] x[k-m] = x[m] * x[-m]$$
-- **Properties**:
-  - Maximum at zero lag: $r_{xx}[0] = \sum_{n} |x[n]|^2 = E_x$ (Signal Energy).
-  - Even symmetry: $r_{xx}[m] = r_{xx}[-m]$.
+This folder contains the MATLAB implementation for **Correlation Analysis**. The code is designed to be self-contained, validated, and optimized for clarity.
 
-### 2. Cross-Correlation:
-Measures the mutual similarity between two distinct sequences $x[n]$ and $y[n]$ as a function of lag $m$:
-$$r_{xy}[m] = \sum_{k=-\infty}^{\infty} x[k] y[k-m] = x[m] * y[-m]$$
+> [!NOTE]  
+> Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.
 
----
+## 🚀 Execution Guide
 
-## 📊 Respective Outputs
+You can run the script interactively in MATLAB or in headless batch mode.
 
-### 1. Output from `auto_correlation.m`:
-*Figure location: [`outputs/auto_correlation.png`](./outputs/auto_correlation.png)*
-
-```
-Input sequence x(n):          1     2     3     4
-Time-reversed sequence x(-n): 4     3     2     1
-Auto-correlation result r_xx: 4    11    20    30    20    11     4
-Energy at lag 0 (E_x):        30
-```
-
-![Auto-Correlation Plot](./outputs/auto_correlation.png)
-
-### 2. Output from `cross_correlation.m`:
-*Figure location: [`outputs/cross_correlation.png`](./outputs/cross_correlation.png)*
-
-```
-Input sequence x(n):            1     2     3     4
-Input sequence y(n):            1     2     1     2
-Cross-correlation result r_xy:  2     5    10    16    12    11     4
-Peak cross-correlation at lag 0: 16
-```
-
-![Cross-Correlation Plot](./outputs/cross_correlation.png)
-
----
-
-## 💻 How to Run
+### Option 1: Interactive Mode
 ```matlab
-% Inside exp-05 folder
-auto_correlation
-cross_correlation
+cd exp-05
+% Run the specific .m file inside this directory
 ```
-Outputs are automatically saved into the [`outputs/`](./outputs/) directory.
+
+### Option 2: Automated Batch Mode (Recommended)
+Return to the root directory and run the master script to execute all experiments and generate all outputs automatically:
+```matlab
+run_all_experiments
+```
+
+---
+<div align="center">
+  <small><a href="../README.md">⬅ Back to Main Lab Index</a></small>
+</div>
