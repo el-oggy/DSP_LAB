@@ -3,7 +3,7 @@
 <img src="./ui/header.svg" alt="DTFT Analysis" width="100%" />
 
 # DTFT Analysis
-*Discrete-Time Fourier Transform*
+*Discrete-Time Fourier Transform Envelope*
 
 </div>
 

@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./ui/header.svg" alt="Signal Generation Basics" width="100%" />
+<img src="./ui/header.svg" alt="Signal Generation" width="100%" />
 
-# Signal Generation Basics
+# Signal Generation
 *Continuous & Discrete Waveform Synthesis*
 
 </div>
@@ -11,7 +11,7 @@
 
 ## 📌 Experiment Overview
 
-This folder contains the MATLAB implementation for **Signal Generation Basics**. The code is designed to be self-contained, validated, and optimized for clarity.
+This folder contains the MATLAB implementation for **Signal Generation**. The code is designed to be self-contained, validated, and optimized for clarity.
 
 > [!NOTE]  
 > Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.

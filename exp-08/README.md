@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="./ui/header.svg" alt="Linear vs Circular Convolution" width="100%" />
+<img src="./ui/header.svg" alt="Circular Convolution" width="100%" />
 
-# Linear vs Circular Convolution
-*FFT Equivalence and Zero-Padding*
+# Circular Convolution
+*FFT Equivalence and Zero-Padding Rings*
 
 </div>
 
@@ -11,7 +11,7 @@
 
 ## 📌 Experiment Overview
 
-This folder contains the MATLAB implementation for **Linear vs Circular Convolution**. The code is designed to be self-contained, validated, and optimized for clarity.
+This folder contains the MATLAB implementation for **Circular Convolution**. The code is designed to be self-contained, validated, and optimized for clarity.
 
 > [!NOTE]  
 > Experimental output plots are automatically generated and saved locally in the `outputs/` folder when you run the scripts. They are ignored from version control to maintain a clean and lightweight repository.

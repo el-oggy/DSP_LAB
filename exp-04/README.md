@@ -3,7 +3,7 @@
 <img src="./ui/header.svg" alt="Linear Convolution" width="100%" />
 
 # Linear Convolution
-*System Interaction and Convolution Sum*
+*System Interaction Sliding Window*
 
 </div>
 

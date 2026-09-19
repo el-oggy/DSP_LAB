@@ -3,7 +3,7 @@
 <img src="./ui/header.svg" alt="Correlation Analysis" width="100%" />
 
 # Correlation Analysis
-*Auto-Correlation & Cross-Correlation*
+*Auto-Correlation Match Detection*
 
 </div>
 

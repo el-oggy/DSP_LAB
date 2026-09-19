@@ -3,7 +3,7 @@
 <img src="./ui/header.svg" alt="DFT Spectrum Visualization" width="100%" />
 
 # DFT Spectrum Visualization
-*Magnitude and Phase Spectra*
+*Magnitude and Phase Spectra Radar*
 
 </div>
 
